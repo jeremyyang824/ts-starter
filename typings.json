@@ -1,0 +1,12 @@
+/**
+  * 通过 typings install npm~chai --save 安装d.ts定义
+  */
+{
+  "name": "ts-starter",
+  "dependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160723033700"
+  },
+  "globalDependencies": {
+    "mocha": "registry:dt/mocha#2.2.5+20170311011848"
+  }
+}

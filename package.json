@@ -1,0 +1,24 @@
+{
+  "name": "ts-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register ./test/**/*.ts"
+  },
+  "author": "jeremyyang824",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "concurrent": "^0.3.2",
+    "lite-server": "^2.3.0",
+    "mocha": "^3.4.1",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.2",
+    "typings": "^2.1.1"
+  }
+}
