@@ -1,10 +1,11 @@
-import hello from '../src/hello';
-import { expect } from 'chai';
-import 'mocha';
+import "mocha";
+import { expect } from "chai";
 
-describe('Hello function', () => {
-  it('should return hello world', () => {
+import hello from "../src/hello";
+
+describe("Hello function", () => {
+  it("should return hello world", () => {
     const result = hello();
-    expect(result).to.equal('Hello World!');
+    expect(result).to.equal("Hello World!");
   });
 });
