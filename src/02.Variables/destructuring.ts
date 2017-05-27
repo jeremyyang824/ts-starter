@@ -12,6 +12,7 @@ function fn3({a, b}: {a: string, b: number} = {a: "hello", b: 1002}): object {
     return {a, b};
 }
 
+// tslint:disable-next-line:interface-over-type-literal
 type C = {a: string, b: number};
 function fn4({a, b}: C = {a: "hello", b: 1003}): object {
     return {a, b};
