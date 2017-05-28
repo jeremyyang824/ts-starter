@@ -1,7 +1,10 @@
 import "mocha";
 import { expect } from "chai";
 
-import {createSquare, IPoint, ISquareConfig} from "../../src/03.Interface/basic";
+import {
+  createSquare, getCounter, IPoint, IReadonlyStringArray, ISquareConfig,
+  IStringArray,
+} from "../../src/03.Interface/basic";
 
 describe("Basic Interface Features", () => {
   const obj = { color: "black" };
@@ -33,6 +36,19 @@ describe("Basic Interface Features", () => {
   });
 
   it("index properties", () => {
-    return true;
+    const myArray: IStringArray = ["Bob", "Fred"];
+    myArray[1] = "Jacky";
+    expect(myArray[0]).to.be.equal("Bob");
+    expect(myArray[1]).to.be.equal("Jacky");
+
+    const myReadonlyArray: IReadonlyStringArray = ["Bob", "Fred"];
+    // myReadonlyArray[1] = "Jacky"; error!
+    expect(myReadonlyArray[1]).to.be.equal("Fred");
+  });
+
+  it("mixin types", () => {
+    const counter = getCounter();
+    const start = counter(10);
+    expect(start).to.be.equal("hello world");
   });
 });
